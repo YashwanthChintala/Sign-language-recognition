@@ -1,0 +1,280 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"605A76190326"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"605A76190328"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"605A761B032D"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"605A76190327"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"605A76190329"
+	logical_models 	(list unit_reference_list
+	    (object Class "user"
+		quid       	"605A76310352"
+		stereotype 	"Actor")
+	    (object UseCase "UploadHandGestureDataset"
+		quid       	"605A76380393")
+	    (object UseCase "TrainCNNwithGestureImage"
+		quid       	"605A765000B3")
+	    (object UseCase "SignLanguageRecognitionFromWebCam"
+		quid       	"605A76760244")
+	    (object Association "$UNNAMED$0"
+		quid       	"605A7693003B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"605A769302E7"
+			supplier   	"Logical View::UploadHandGestureDataset"
+			quidu      	"605A76380393"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"605A769302E8"
+			supplier   	"Logical View::user"
+			quidu      	"605A76310352"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$3"
+		quid       	"605A7695009B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"605A76950279"
+			supplier   	"Logical View::TrainCNNwithGestureImage"
+			quidu      	"605A765000B3"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"605A7695027A"
+			supplier   	"Logical View::user"
+			quidu      	"605A76310352"
+			is_navigable 	TRUE)))
+	    (object Association "$UNNAMED$6"
+		quid       	"605A76970139"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"605A769703C1"
+			supplier   	"Logical View::SignLanguageRecognitionFromWebCam"
+			quidu      	"605A76760244"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"605A769703C2"
+			supplier   	"Logical View::user"
+			quidu      	"605A76310352"
+			is_navigable 	TRUE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"605A761B0334"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Logical View::UploadHandGestureDataset" @1
+			location   	(1136, 256)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1136, 394)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"UploadHandGestureDataset")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A76380393"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Logical View::TrainCNNwithGestureImage" @2
+			location   	(1136, 528)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1136, 666)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"TrainCNNwithGestureImage")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A765000B3"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::user" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(288, 528)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(288, 688)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"user")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A76310352"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @4
+			location   	(615, 420)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"605A7693003B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @5
+				Parent_View 	@4
+				location   	(327, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A769302E7"
+				client     	@4
+				supplier   	@1
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @6
+				Parent_View 	@4
+				location   	(327, -108)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A769302E8"
+				client     	@4
+				supplier   	@3
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @7
+			location   	(685, 528)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"605A7695009B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @8
+				Parent_View 	@7
+				location   	(397, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A76950279"
+				client     	@7
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @9
+				Parent_View 	@7
+				location   	(397, 0)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A7695027A"
+				client     	@7
+				supplier   	@3
+				line_style 	0)))
+		    (object UseCaseView "Logical View::SignLanguageRecognitionFromWebCam" @10
+			location   	(1152, 784)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1152, 922)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"SignLanguageRecognitionFromWebCam")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A76760244"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$6" @11
+			location   	(692, 645)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"605A76970139"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @12
+				Parent_View 	@11
+				location   	(404, 117)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A769703C1"
+				client     	@11
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @13
+				Parent_View 	@11
+				location   	(404, 117)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"605A769703C2"
+				client     	@11
+				supplier   	@3
+				line_style 	0)))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"605A76190329"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"605A761B032C"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"605A7619032A"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"605A7619032C"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"605A7619032B"))

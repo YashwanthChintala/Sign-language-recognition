@@ -1,0 +1,331 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"605A7774016F"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"605A77740171"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "user"
+			quid       	"605A77940224"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"605A77A60166"
+				supplier   	"application"
+				quidu      	"605A779E0010"
+				messages   	(list Messages
+				    (object Message "uploadHandGestureDataset"
+					quid       	"605A77A60167"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "trainCNNwithGestureImage"
+					quid       	"605A77BF02AB"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "signLanguageRecognitionFromWebam"
+					quid       	"605A77CB001E"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)))
+			    (object Link
+				quid       	"605A77D301A6"
+				supplier   	"user"
+				quidu      	"605A77940224"
+				messages   	(list Messages
+				    (object Message "logout"
+					quid       	"605A77D301A7"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "application"
+			quid       	"605A779E0010"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"605A77740200"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "sequence"
+		mechanism_ref 	@1
+		quid       	"605A778E02E8"
+		title      	"sequence"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "user" @2
+			location   	(576, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(576, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"user")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A77940224"
+			width      	300
+			height     	977
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
+			    location   	(576, 368)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(576, 544)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(576, 752)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(576, 960)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	152
+			    y_coord    	92
+			    Nested     	FALSE))
+		    (object InterObjView "application" @7
+			location   	(1888, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(1888, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"605A779E0010"
+			width      	300
+			height     	977
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(1888, 368)
+			    line_color 	3342489
+			    InterObjView 	@7
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @9
+			    location   	(1888, 544)
+			    line_color 	3342489
+			    InterObjView 	@7
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(1888, 752)
+			    line_color 	3342489
+			    InterObjView 	@7
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @11
+			location   	(0, 368)
+			label      	(object SegLabel @12
+			    Parent_View 	@11
+			    location   	(1232, 310)
+			    quidu      	"605A77A60167"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	481
+			    justify    	0
+			    label      	"uploadHandGestureDataset"
+			    pctDist    	0.500781
+			    height     	59
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@7
+			Focus_Src  	@3
+			Focus_Entry 	@8
+			origin     	(592, 368)
+			terminus   	(1872, 368)
+			ordinal    	0)
+		    (object InterMessView "" @13
+			location   	(0, 544)
+			label      	(object SegLabel @14
+			    Parent_View 	@13
+			    location   	(1197, 501)
+			    quidu      	"605A77BF02AB"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	475
+			    justify    	0
+			    label      	"trainCNNwithGestureImage"
+			    pctDist    	0.473437
+			    height     	44
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@7
+			Focus_Src  	@4
+			Focus_Entry 	@9
+			origin     	(592, 544)
+			terminus   	(1872, 544)
+			ordinal    	1)
+		    (object InterMessView "" @15
+			location   	(0, 752)
+			label      	(object SegLabel @16
+			    Parent_View 	@15
+			    location   	(1232, 710)
+			    quidu      	"605A77CB001E"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	675
+			    justify    	0
+			    label      	"signLanguageRecognitionFromWebam"
+			    pctDist    	0.500781
+			    height     	43
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@7
+			Focus_Src  	@5
+			Focus_Entry 	@10
+			origin     	(592, 752)
+			terminus   	(1872, 752)
+			ordinal    	2)
+		    (object SelfMessView "" @17
+			location   	(0, 992)
+			label      	(object SegLabel @18
+			    Parent_View 	@17
+			    location   	(667, 948)
+			    quidu      	"605A77D301A7"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	106
+			    justify    	0
+			    label      	"logout"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@2
+			Focus_Src  	@6
+			origin     	(592, 992)
+			terminus   	(742, 992)
+			ordinal    	3)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"605A77740170"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"605A77740172"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"605A77740180"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"605A77740172"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"605A777401FF"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"605A77740173"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"605A77740175"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"605A77740174"))
